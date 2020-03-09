@@ -4,6 +4,7 @@
             "Engine": "LevelDBStore"
         },
         "P2P": {
+            "MaxConnectionsPerAddress": 10,
             "Port": 33333,
             "WsPort": 33334
         },
