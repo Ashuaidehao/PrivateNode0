@@ -1,19 +1,18 @@
 {
-    "ApplicationConfiguration": {
-        "Storage": {
-            "Engine": "LevelDBStore"
-        },
-        "P2P": {
-            "MaxConnectionsPerAddress": 10,
-            "Port": 33333,
-            "WsPort": 33334
-        },
-        "UnlockWallet": {
-            "Path": "0.neo3.json",
-            "Password": "123456",
-            "StartConsensus": true,
-            "IsActive": true
-        },
-        "PluginURL": "https://github.com/neo-project/neo-modules/releases/download/v{1}/{0}.zip"
-    }
+  "ApplicationConfiguration": {
+    "Storage": {
+      "Engine": "LevelDBStore"
+    },
+    "P2P": {
+      "Port": 10333,
+      "WsPort": 10334
+    },
+    "UnlockWallet": {
+      "Path": "",
+      "Password": "",
+      "StartConsensus": false,
+      "IsActive": false
+    },
+    "PluginURL": "https://github.com/neo-project/neo-modules/releases/download/v{1}/{0}.zip"
+  }
 }
