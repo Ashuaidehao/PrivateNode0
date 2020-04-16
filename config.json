@@ -4,8 +4,8 @@
       "Engine": "LevelDBStore"
     },
     "P2P": {
-      "Port": 10333,
-      "WsPort": 10334
+      "Port": 33333,
+      "WsPort": 33334
     },
     "UnlockWallet": {
       "Path": "0.neo3.json",
