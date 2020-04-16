@@ -8,10 +8,10 @@
       "WsPort": 10334
     },
     "UnlockWallet": {
-      "Path": "",
-      "Password": "",
-      "StartConsensus": false,
-      "IsActive": false
+      "Path": "0.neo3.json",
+      "Password": "123456",
+      "StartConsensus": true,
+      "IsActive": true
     },
     "PluginURL": "https://github.com/neo-project/neo-modules/releases/download/v{1}/{0}.zip"
   }
