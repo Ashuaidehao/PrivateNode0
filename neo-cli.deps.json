@@ -9,7 +9,9 @@
       "neo-cli/3.0.0-preview1": {
         "dependencies": {
           "Neo": "3.0.0-preview2-00",
-          "Neo.ConsoleService": "1.0.0"
+          "Neo.ConsoleService": "1.0.0",
+          "neo.leveldb.dev": "3.0.0-pre4",
+          "System.ServiceProcess.ServiceController": "4.7.0"
         },
         "runtime": {
           "neo-cli.dll": {}
@@ -619,6 +621,25 @@
           "lib/netstandard2.1/Neo.dll": {
             "assemblyVersion": "3.0.0.0",
             "fileVersion": "3.0.0.0"
+          }
+        }
+      },
+      "neo.leveldb.dev/3.0.0-pre4": {
+        "runtimeTargets": {
+          "runtimes/linux-x64/native/libleveldb.so": {
+            "rid": "linux-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx-x64/native/libleveldb.dylib": {
+            "rid": "osx-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/win-x64/native/libleveldb.dll": {
+            "rid": "win-x64",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
           }
         }
       },
@@ -1368,6 +1389,13 @@
       "sha512": "sha512-PmwXDhIkITy54/3WXSsoE6CgL13HvpLehP1qpvcjw1OAtKgHbv2cLOOzY3P4mZWs/uz92U6yw6ch5Ej651DBVA==",
       "path": "neo/3.0.0-preview2-00",
       "hashPath": "neo.3.0.0-preview2-00.nupkg.sha512"
+    },
+    "neo.leveldb.dev/3.0.0-pre4": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-yC0HL26egjPxPeUOL72hzyuhmJ6kFzFwDxBcUKRNwQL2aj4flyj5BCvFVzhQq+YXeM31wxTxqC7pyfVfg2/LUg==",
+      "path": "neo.leveldb.dev/3.0.0-pre4",
+      "hashPath": "neo.leveldb.dev.3.0.0-pre4.nupkg.sha512"
     },
     "Neo.VM/3.0.0-preview2": {
       "type": "package",
