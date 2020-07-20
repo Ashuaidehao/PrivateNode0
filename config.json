@@ -1,15 +1,19 @@
 {
   "ApplicationConfiguration": {
+    "Logger": {
+      "Path": "Logs_{0}",
+      "ConsoleOutput": false,
+      "Active": false
+    },
     "Storage": {
       "Engine": "LevelDBStore"
     },
     "P2P": {
-      "MaxConnectionsPerAddress": 10,
       "Port": 33333,
       "WsPort": 33334
     },
     "UnlockWallet": {
-      "Path": "0.neo3.json",
+      "Path": "0.neo3.ver3.json",
       "Password": "123456",
       "StartConsensus": true,
       "IsActive": true
