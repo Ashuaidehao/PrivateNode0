@@ -1,13 +1,12 @@
 {
   "ProtocolConfiguration": {
-    "Magic": 777777,
+    "Magic": 666666,
     "MillisecondsPerBlock": 15000,
     "StandbyCommittee": [
       "023592bca183fda6e86f2248299b8baa63405ba83beb5e0c5027b304a809fc423d"
     ],
     "ValidatorsCount": 1,
     "SeedList": [
-      "128.1.61.238:33333"
     ]
   }
 }
