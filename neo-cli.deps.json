@@ -6,9 +6,9 @@
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v3.0": {
-      "neo-cli/3.0.0-preview3": {
+      "neo-cli/3.0.0-preview4": {
         "dependencies": {
-          "Neo": "3.0.0-preview3",
+          "Neo": "3.0.0-preview4",
           "Neo.ConsoleService": "1.0.0",
           "neo.leveldb.dev": "3.0.0-pre4",
           "System.ServiceProcess.ServiceController": "4.7.0"
@@ -639,6 +639,24 @@
           }
         }
       },
+      "Neo/3.0.0-preview4": {
+        "dependencies": {
+          "Akka": "1.4.5",
+          "BouncyCastle.NetCore": "1.8.8",
+          "K4os.Compression.LZ4": "1.1.11",
+          "Microsoft.AspNetCore.Server.Kestrel": "2.2.0",
+          "Microsoft.AspNetCore.WebSockets": "2.2.1",
+          "Microsoft.EntityFrameworkCore.Sqlite": "3.1.3",
+          "Microsoft.Extensions.Configuration.Json": "3.1.3",
+          "Neo.VM": "3.0.0-preview4"
+        },
+        "runtime": {
+          "lib/netstandard2.1/Neo.dll": {
+            "assemblyVersion": "3.0.0.0",
+            "fileVersion": "3.0.0.0"
+          }
+        }
+      },
       "neo.leveldb.dev/3.0.0-pre4": {
         "runtimeTargets": {
           "runtimes/linux-x64/native/libleveldb.so": {
@@ -658,7 +676,7 @@
           }
         }
       },
-      "Neo.VM/3.0.0-CI00251": {
+      "Neo.VM/3.0.0-preview4": {
         "runtime": {
           "lib/netstandard2.1/Neo.VM.dll": {
             "assemblyVersion": "3.0.0.0",
@@ -1070,21 +1088,6 @@
           }
         }
       },
-      "Neo/3.0.0-preview3": {
-        "dependencies": {
-          "Akka": "1.4.5",
-          "BouncyCastle.NetCore": "1.8.8",
-          "K4os.Compression.LZ4": "1.1.11",
-          "Microsoft.AspNetCore.Server.Kestrel": "2.2.0",
-          "Microsoft.AspNetCore.WebSockets": "2.2.1",
-          "Microsoft.EntityFrameworkCore.Sqlite": "3.1.3",
-          "Microsoft.Extensions.Configuration.Json": "3.1.3",
-          "Neo.VM": "3.0.0-CI00251"
-        },
-        "runtime": {
-          "Neo.dll": {}
-        }
-      },
       "Neo.ConsoleService/1.0.0": {
         "dependencies": {
           "System.Runtime.Loader": "4.3.0",
@@ -1097,7 +1100,7 @@
     }
   },
   "libraries": {
-    "neo-cli/3.0.0-preview3": {
+    "neo-cli/3.0.0-preview4": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
@@ -1473,6 +1476,13 @@
       "path": "microsoft.win32.systemevents/4.7.0",
       "hashPath": "microsoft.win32.systemevents.4.7.0.nupkg.sha512"
     },
+    "Neo/3.0.0-preview4": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-wfv2bHiiBTqsAlK8d4lvFRxulD2+1lb47MZKk9W9/R4sGNrmrwpzRqHyV3O/P3/9g9Ri8UItuY/A6zd2BFgizQ==",
+      "path": "neo/3.0.0-preview4",
+      "hashPath": "neo.3.0.0-preview4.nupkg.sha512"
+    },
     "neo.leveldb.dev/3.0.0-pre4": {
       "type": "package",
       "serviceable": true,
@@ -1480,12 +1490,12 @@
       "path": "neo.leveldb.dev/3.0.0-pre4",
       "hashPath": "neo.leveldb.dev.3.0.0-pre4.nupkg.sha512"
     },
-    "Neo.VM/3.0.0-CI00251": {
+    "Neo.VM/3.0.0-preview4": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-gaMbxVGc5GwCflA7gmqh4gGTCbCUSTswsI5/iOur9y68S55XcRPADERzg47qv4X+GzzPB/TQrxK7ttFEYiaWJw==",
-      "path": "neo.vm/3.0.0-ci00251",
-      "hashPath": "neo.vm.3.0.0-ci00251.nupkg.sha512"
+      "sha512": "sha512-2mc1FDFfnDlIPtGaRpyCx8pFFgwjXz07gUPqLJmcx+zV+sy+vgjGGavcw1uLgePAoBuecvu1TvumaiEZS1R8zQ==",
+      "path": "neo.vm/3.0.0-preview4",
+      "hashPath": "neo.vm.3.0.0-preview4.nupkg.sha512"
     },
     "Newtonsoft.Json/12.0.3": {
       "type": "package",
@@ -1731,11 +1741,6 @@
       "sha512": "sha512-CeWTdRNfRaSh0pm2gDTJFwVaXfTq6Xwv/sA887iwPTneW7oMtMlpvDIO+U60+3GWTB7Aom6oQwv5VZVUhQRdPQ==",
       "path": "system.windows.extensions/4.7.0",
       "hashPath": "system.windows.extensions.4.7.0.nupkg.sha512"
-    },
-    "Neo/3.0.0-preview3": {
-      "type": "project",
-      "serviceable": false,
-      "sha512": ""
     },
     "Neo.ConsoleService/1.0.0": {
       "type": "project",
