@@ -1,14 +1,16 @@
 {
   "ProtocolConfiguration": {
-    "Magic": 777777,
+    "Magic": 55555,
     "MillisecondsPerBlock": 15000,
     "MaxTraceableBlocks": 2102400,
     "StandbyCommittee": [
-      "023592bca183fda6e86f2248299b8baa63405ba83beb5e0c5027b304a809fc423d"
-	  ,"02e6e67fb1754f898b6ad7de1794f64c84352ef95c32246bb2877e88000744368f"
+      "021b3f15c2c98e99794c2121a0f3683803edcf488e621480f6050fd6b01432e18b"
     ],
     "ValidatorsCount": 1,
     "SeedList": [
+      "127.0.0.1:10333"
+
+      //"128.1.61.238:33333"
     ]
   }
 }
