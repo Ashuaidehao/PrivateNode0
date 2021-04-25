@@ -954,6 +954,13 @@
             <param name="name">The name of the property to get or set.</param>
             <returns>The property with the specified name.</returns>
         </member>
+        <member name="P:Neo.IO.Json.JObject.Item(System.Int32)">
+            <summary>
+            Gets the property at the specified index.
+            </summary>
+            <param name="index">The zero-based index of the property to get.</param>
+            <returns>The property at the specified index.</returns>
+        </member>
         <member name="M:Neo.IO.Json.JObject.AsBoolean">
             <summary>
             Converts the current JSON object to a boolean value.
@@ -1821,7 +1828,7 @@
             Gets the data of a <see cref="T:Neo.Network.P2P.Payloads.IVerifiable"/> object to be hashed.
             </summary>
             <param name="verifiable">The <see cref="T:Neo.Network.P2P.Payloads.IVerifiable"/> object to hash.</param>
-            <param name="magic">The magic number of the network.</param>
+            <param name="network">The magic number of the network.</param>
             <returns>The data to hash.</returns>
         </member>
         <member name="T:Neo.Network.P2P.LocalNode">
@@ -2886,7 +2893,7 @@
             Indicates the maximum number of capabilities contained in a <see cref="T:Neo.Network.P2P.Payloads.VersionPayload"/>.
             </summary>
         </member>
-        <member name="F:Neo.Network.P2P.Payloads.VersionPayload.Magic">
+        <member name="F:Neo.Network.P2P.Payloads.VersionPayload.Network">
             <summary>
             The magic number of the network.
             </summary>
@@ -2920,7 +2927,7 @@
             <summary>
             Creates a new instance of the <see cref="T:Neo.Network.P2P.Payloads.VersionPayload"/> class.
             </summary>
-            <param name="magic">The magic number of the network.</param>
+            <param name="network">The magic number of the network.</param>
             <param name="nonce">The random number used to identify the node.</param>
             <param name="userAgent">The <see cref="T:System.String"/> used to identify the client software of the node.</param>
             <param name="capabilities">The capabilities of the node.</param>
@@ -3816,7 +3823,7 @@
             Represents the protocol settings of the NEO system.
             </summary>
         </member>
-        <member name="P:Neo.ProtocolSettings.Magic">
+        <member name="P:Neo.ProtocolSettings.Network">
             <summary>
             The magic number of the NEO network.
             </summary>
@@ -4003,24 +4010,24 @@
         </member>
         <member name="F:Neo.SmartContract.ApplicationEngine.CheckSigPrice">
             <summary>
-            The price of Neo.Crypto.CheckSig.
+            The price of System.Crypto.CheckSig.
             </summary>
         </member>
-        <member name="F:Neo.SmartContract.ApplicationEngine.Neo_Crypto_CheckSig">
+        <member name="F:Neo.SmartContract.ApplicationEngine.System_Crypto_CheckSig">
             <summary>
-            The <see cref="T:Neo.SmartContract.InteropDescriptor"/> of Neo.Crypto.CheckSig.
+            The <see cref="T:Neo.SmartContract.InteropDescriptor"/> of System.Crypto.CheckSig.
             Checks the signature for the current script container.
             </summary>
         </member>
-        <member name="F:Neo.SmartContract.ApplicationEngine.Neo_Crypto_CheckMultisig">
+        <member name="F:Neo.SmartContract.ApplicationEngine.System_Crypto_CheckMultisig">
             <summary>
-            The <see cref="T:Neo.SmartContract.InteropDescriptor"/> of Neo.Crypto.CheckMultisig.
+            The <see cref="T:Neo.SmartContract.InteropDescriptor"/> of System.Crypto.CheckMultisig.
             Checks the signatures for the current script container.
             </summary>
         </member>
         <member name="M:Neo.SmartContract.ApplicationEngine.CheckSig(System.Byte[],System.Byte[])">
             <summary>
-            The implementation of Neo.Crypto.CheckSig.
+            The implementation of System.Crypto.CheckSig.
             Checks the signature for the current script container.
             </summary>
             <param name="pubkey">The public key of the account.</param>
@@ -4029,7 +4036,7 @@
         </member>
         <member name="M:Neo.SmartContract.ApplicationEngine.CheckMultisig(System.Byte[][],System.Byte[][])">
             <summary>
-            The implementation of Neo.Crypto.CheckMultisig.
+            The implementation of System.Crypto.CheckMultisig.
             Checks the signatures for the current script container.
             </summary>
             <param name="pubkeys">The public keys of the account.</param>
@@ -4204,12 +4211,6 @@
             <param name="gas">The maximum gas used in this execution. The execution will fail when the gas is exhausted.</param>
             <returns>The engine instance created.</returns>
         </member>
-        <member name="F:Neo.SmartContract.ApplicationEngine.System_Iterator_Create">
-            <summary>
-            The <see cref="T:Neo.SmartContract.InteropDescriptor"/> of System.Iterator.Create.
-            Creates an <see cref="T:Neo.SmartContract.Iterators.IIterator"/> with the specified <see cref="T:Neo.VM.Types.StackItem"/>.
-            </summary>
-        </member>
         <member name="F:Neo.SmartContract.ApplicationEngine.System_Iterator_Next">
             <summary>
             The <see cref="T:Neo.SmartContract.InteropDescriptor"/> of System.Iterator.Next.
@@ -4221,14 +4222,6 @@
             The <see cref="T:Neo.SmartContract.InteropDescriptor"/> of System.Iterator.Value.
             Gets the element in the collection at the current position of the iterator.
             </summary>
-        </member>
-        <member name="M:Neo.SmartContract.ApplicationEngine.CreateIterator(Neo.VM.Types.StackItem)">
-            <summary>
-            The implementation of System.Iterator.Create.
-            Creates an <see cref="T:Neo.SmartContract.Iterators.IIterator"/> with the specified <see cref="T:Neo.VM.Types.StackItem"/>.
-            </summary>
-            <param name="item">The <see cref="T:Neo.VM.Types.StackItem"/> wrapped by the iterator.</param>
-            <returns>The created iterator.</returns>
         </member>
         <member name="M:Neo.SmartContract.ApplicationEngine.IteratorNext(Neo.SmartContract.Iterators.IIterator)">
             <summary>
@@ -4339,6 +4332,12 @@
             Gets the remaining GAS that can be spent in order to complete the execution.
             </summary>
         </member>
+        <member name="F:Neo.SmartContract.ApplicationEngine.System_Runtime_BurnGas">
+            <summary>
+            The <see cref="T:Neo.SmartContract.InteropDescriptor"/> of System.Runtime.BurnGas.
+            Burning GAS to benefit the NEO ecosystem.
+            </summary>
+        </member>
         <member name="M:Neo.SmartContract.ApplicationEngine.GetPlatform">
             <summary>
             The implementation of System.Runtime.Platform.
@@ -4412,6 +4411,13 @@
             </summary>
             <param name="hash">The hash of the specified contract. It can be set to <see langword="null"/> to get all notifications.</param>
             <returns>The notifications sent during the execution.</returns>
+        </member>
+        <member name="M:Neo.SmartContract.ApplicationEngine.BurnGas(System.Int64)">
+            <summary>
+            The implementation of System.Runtime.BurnGas.
+            Burning GAS to benefit the NEO ecosystem.
+            </summary>
+            <param name="gas">The amount of GAS to burn.</param>
         </member>
         <member name="F:Neo.SmartContract.ApplicationEngine.MaxStorageKeySize">
             <summary>
@@ -4750,6 +4756,11 @@
             The snapshot used to read data.
             </summary>
         </member>
+        <member name="F:Neo.SmartContract.ContractParametersContext.Network">
+            <summary>
+            The magic number of the network.
+            </summary>
+        </member>
         <member name="P:Neo.SmartContract.ContractParametersContext.Completed">
             <summary>
             Determines whether all witnesses are ready to be added.
@@ -4760,12 +4771,13 @@
             Gets the script hashes to be verified for the <see cref="F:Neo.SmartContract.ContractParametersContext.Verifiable"/>.
             </summary>
         </member>
-        <member name="M:Neo.SmartContract.ContractParametersContext.#ctor(Neo.Persistence.DataCache,Neo.Network.P2P.Payloads.IVerifiable)">
+        <member name="M:Neo.SmartContract.ContractParametersContext.#ctor(Neo.Persistence.DataCache,Neo.Network.P2P.Payloads.IVerifiable,System.UInt32)">
             <summary>
             Initializes a new instance of the <see cref="T:Neo.SmartContract.ContractParametersContext"/> class.
             </summary>
             <param name="snapshot">The snapshot used to read data.</param>
             <param name="verifiable">The <see cref="T:Neo.Network.P2P.Payloads.IVerifiable"/> to add witnesses.</param>
+            <param name="network">The magic number of the network.</param>
         </member>
         <member name="M:Neo.SmartContract.ContractParametersContext.Add(Neo.SmartContract.Contract,System.Int32,System.Object)">
             <summary>
@@ -5741,6 +5753,12 @@
             </summary>
             <returns>The permission descriptor represented by a JSON object.</returns>
         </member>
+        <member name="M:Neo.SmartContract.Manifest.ContractPermissionDescriptor.ToArray">
+            <summary>
+            Converts the permission descriptor to byte array.
+            </summary>
+            <returns>The converted byte array. Or <see langword="null"/> if it is a wildcard.</returns>
+        </member>
         <member name="T:Neo.SmartContract.Manifest.WildcardContainer`1">
             <summary>
             A list that supports wildcard.
@@ -5773,7 +5791,7 @@
             <param name="elementSelector">A converter for elements.</param>
             <returns>The converted list.</returns>
         </member>
-        <member name="M:Neo.SmartContract.Manifest.WildcardContainer`1.ToJson">
+        <member name="M:Neo.SmartContract.Manifest.WildcardContainer`1.ToJson(System.Func{`0,Neo.IO.Json.JObject})">
             <summary>
             Converts the list to a JSON object.
             </summary>
@@ -6047,76 +6065,6 @@
             The secp256r1 curve, which known as prime256v1 or nistP-256.
             </summary>
         </member>
-        <member name="T:Neo.SmartContract.Native.NameService">
-            <summary>
-            A native name service for NEO system.
-            </summary>
-        </member>
-        <member name="M:Neo.SmartContract.Native.NameService.GetRoots(Neo.Persistence.DataCache)">
-            <summary>
-            Gets all the root names in the system.
-            </summary>
-            <param name="snapshot">The snapshot used to read data.</param>
-            <returns>All the root names in the system.</returns>
-        </member>
-        <member name="M:Neo.SmartContract.Native.NameService.GetPrice(Neo.Persistence.DataCache)">
-            <summary>
-            Gets the price for registering a name.
-            </summary>
-            <param name="snapshot">The snapshot used to read data.</param>
-            <returns>The price for registering a name.</returns>
-        </member>
-        <member name="M:Neo.SmartContract.Native.NameService.IsAvailable(Neo.Persistence.DataCache,System.String)">
-            <summary>
-            Determine whether the specified name is available to be registered.
-            </summary>
-            <param name="snapshot">The snapshot used to read data.</param>
-            <param name="name">The name to check.</param>
-            <returns><see langword="true"/> if the name is available; otherwise, <see langword="false"/>.</returns>
-            <exception cref="T:System.ArgumentException">The format of <paramref name="name"/> is incorrect.</exception>
-            <exception cref="T:System.InvalidOperationException">The root name doesn't exist.</exception>
-        </member>
-        <member name="M:Neo.SmartContract.Native.NameService.GetRecord(Neo.Persistence.DataCache,System.String,Neo.SmartContract.Native.RecordType)">
-            <summary>
-            Gets a record for the specified name.
-            </summary>
-            <param name="snapshot">The snapshot used to read data.</param>
-            <param name="name">The name for the record.</param>
-            <param name="type">The type of the record.</param>
-            <returns>The record without resolved. Or <see langword="null"/> if no record is found.</returns>
-        </member>
-        <member name="M:Neo.SmartContract.Native.NameService.GetRecords(Neo.Persistence.DataCache,System.String)">
-            <summary>
-            Gets all the records for the specified name.
-            </summary>
-            <param name="snapshot">The snapshot used to read data.</param>
-            <param name="name">The name for the record.</param>
-            <returns>All the records for the name.</returns>
-        </member>
-        <member name="M:Neo.SmartContract.Native.NameService.Resolve(Neo.Persistence.DataCache,System.String,Neo.SmartContract.Native.RecordType)">
-            <summary>
-            Gets and resolves a record for the specified name.
-            </summary>
-            <param name="snapshot">The snapshot used to read data.</param>
-            <param name="name">The name for the record.</param>
-            <param name="type">The type of the record.</param>
-            <returns>The resolved record.</returns>
-        </member>
-        <member name="T:Neo.SmartContract.Native.NameService.NameState">
-            <summary>
-            The token state of <see cref="T:Neo.SmartContract.Native.NameService"/>.
-            </summary>
-        </member>
-        <member name="F:Neo.SmartContract.Native.NameService.NameState.Expiration">
-            <summary>
-            Indicates when the name expires.
-            </summary>
-        </member>
-        <member name="F:Neo.SmartContract.Native.NameService.NameState.Admin">
-            <summary>
-            The administrator of the name.
-            </summary>
-        </member>
         <member name="T:Neo.SmartContract.Native.NativeContract">
             <summary>
             The base class of all native contracts.
@@ -6165,11 +6113,6 @@
         <member name="P:Neo.SmartContract.Native.NativeContract.Oracle">
             <summary>
             Gets the instance of the <see cref="T:Neo.SmartContract.Native.OracleContract"/> class.
-            </summary>
-        </member>
-        <member name="P:Neo.SmartContract.Native.NativeContract.NameService">
-            <summary>
-            Gets the instance of the <see cref="T:Neo.SmartContract.Native.NameService"/> class.
             </summary>
         </member>
         <member name="P:Neo.SmartContract.Native.NativeContract.Contracts">
@@ -6326,120 +6269,6 @@
             The voting target of the account. This field can be <see langword="null"/>.
             </summary>
         </member>
-        <member name="T:Neo.SmartContract.Native.NFTState">
-            <summary>
-            The base class of the token states for <see cref="T:Neo.SmartContract.Native.NonfungibleToken`1"/>.
-            </summary>
-        </member>
-        <member name="F:Neo.SmartContract.Native.NFTState.Owner">
-            <summary>
-            The owner of the token.
-            </summary>
-        </member>
-        <member name="F:Neo.SmartContract.Native.NFTState.Name">
-            <summary>
-            The name of the token.
-            </summary>
-        </member>
-        <member name="P:Neo.SmartContract.Native.NFTState.Id">
-            <summary>
-            The id of the token.
-            </summary>
-        </member>
-        <member name="M:Neo.SmartContract.Native.NFTState.ToMap(Neo.VM.ReferenceCounter)">
-            <summary>
-            Converts the token to a <see cref="T:Neo.VM.Types.Map"/>.
-            </summary>
-            <param name="referenceCounter">The <see cref="T:Neo.VM.ReferenceCounter"/> used by the <see cref="T:Neo.VM.Types.Map"/>.</param>
-            <returns>The converted map.</returns>
-        </member>
-        <member name="T:Neo.SmartContract.Native.NonfungibleToken`1">
-            <summary>
-            The base class of all native tokens that are compatible with NEP-11.
-            </summary>
-            <typeparam name="TokenState">The type of the token state.</typeparam>
-        </member>
-        <member name="P:Neo.SmartContract.Native.NonfungibleToken`1.Symbol">
-            <summary>
-            The symbol of the token.
-            </summary>
-        </member>
-        <member name="P:Neo.SmartContract.Native.NonfungibleToken`1.Decimals">
-            <summary>
-            The number of decimal places of the token. It always return 0 in native NFT.
-            </summary>
-        </member>
-        <member name="F:Neo.SmartContract.Native.NonfungibleToken`1.Prefix_Token">
-            <summary>
-            The prefix for storing token states.
-            </summary>
-        </member>
-        <member name="M:Neo.SmartContract.Native.NonfungibleToken`1.#ctor">
-            <summary>
-            Initializes a new instance of the <see cref="T:Neo.SmartContract.Native.NonfungibleToken`1"/> class.
-            </summary>
-        </member>
-        <member name="M:Neo.SmartContract.Native.NonfungibleToken`1.GetKey(System.Byte[])">
-            <summary>
-            Gets the storage key of the specified token id.
-            </summary>
-            <param name="tokenId">The id of the token.</param>
-            <returns>The storage key.</returns>
-        </member>
-        <member name="M:Neo.SmartContract.Native.NonfungibleToken`1.TotalSupply(Neo.Persistence.DataCache)">
-            <summary>
-            Gets the total supply of the token.
-            </summary>
-            <param name="snapshot">The snapshot used to read data.</param>
-            <returns>The total supply of the token.</returns>
-        </member>
-        <member name="M:Neo.SmartContract.Native.NonfungibleToken`1.OwnerOf(Neo.Persistence.DataCache,System.Byte[])">
-            <summary>
-            Gets the owner of the token.
-            </summary>
-            <param name="snapshot">The snapshot used to read data.</param>
-            <param name="tokenId">The id of the token.</param>
-            <returns>The owner of the token.</returns>
-        </member>
-        <member name="M:Neo.SmartContract.Native.NonfungibleToken`1.Properties(Neo.SmartContract.ApplicationEngine,System.Byte[])">
-            <summary>
-            Gets the properties of the token.
-            </summary>
-            <param name="engine">The <see cref="T:Neo.SmartContract.ApplicationEngine"/> that is executing the contract.</param>
-            <param name="tokenId">The id of the token.</param>
-            <returns></returns>
-        </member>
-        <member name="M:Neo.SmartContract.Native.NonfungibleToken`1.BalanceOf(Neo.Persistence.DataCache,Neo.UInt160)">
-            <summary>
-            Gets the balance of the specified account.
-            </summary>
-            <param name="snapshot">The snapshot used to read data.</param>
-            <param name="owner">The owner of the account.</param>
-            <returns>The balance of the account. Or 0 if the account doesn't exist.</returns>
-        </member>
-        <member name="M:Neo.SmartContract.Native.NonfungibleToken`1.Tokens(Neo.Persistence.DataCache)">
-            <summary>
-            Get all the tokens that have been issued in the contract.
-            </summary>
-            <param name="snapshot">The snapshot used to read data.</param>
-            <returns>All the tokens that have been issued.</returns>
-        </member>
-        <member name="M:Neo.SmartContract.Native.NonfungibleToken`1.TokensOf(Neo.Persistence.DataCache,Neo.UInt160)">
-            <summary>
-            Gets all the tokens owned by the specified account.
-            </summary>
-            <param name="snapshot">The snapshot used to read data.</param>
-            <param name="owner">The owner of the account.</param>
-            <returns>All the tokens owned by the specified account.</returns>
-        </member>
-        <member name="M:Neo.SmartContract.Native.NonfungibleToken`1.OnTransferred(Neo.SmartContract.ApplicationEngine,Neo.UInt160,`0)">
-            <summary>
-            Called when a token is transferred.
-            </summary>
-            <param name="engine">The <see cref="T:Neo.SmartContract.ApplicationEngine"/> that is executing the contract.</param>
-            <param name="from">The account where the token is transferred from.</param>
-            <param name="token">The token that is transferred.</param>
-        </member>
         <member name="T:Neo.SmartContract.Native.OracleContract">
             <summary>
             The native Oracle service for NEO system.
@@ -6574,31 +6403,6 @@
             <param name="account">The account to be checked.</param>
             <returns><see langword="true"/> if the account is blocked; otherwise, <see langword="false"/>.</returns>
         </member>
-        <member name="T:Neo.SmartContract.Native.RecordType">
-            <summary>
-            Represents the type of a name record.
-            </summary>
-        </member>
-        <member name="F:Neo.SmartContract.Native.RecordType.A">
-            <summary>
-            Address record.
-            </summary>
-        </member>
-        <member name="F:Neo.SmartContract.Native.RecordType.CNAME">
-            <summary>
-            Canonical name record.
-            </summary>
-        </member>
-        <member name="F:Neo.SmartContract.Native.RecordType.TXT">
-            <summary>
-            Text record.
-            </summary>
-        </member>
-        <member name="F:Neo.SmartContract.Native.RecordType.AAAA">
-            <summary>
-            IPv6 address record.
-            </summary>
-        </member>
         <member name="T:Neo.SmartContract.Native.Role">
             <summary>
             Represents the roles in the NEO system.
@@ -6638,6 +6442,13 @@
             A native contract library that provides useful functions.
             </summary>
         </member>
+        <member name="M:Neo.SmartContract.Native.StdLib.Itoa(System.Numerics.BigInteger)">
+            <summary>
+            Converts an integer to a <see cref="T:System.String"/>.
+            </summary>
+            <param name="value">The integer to convert.</param>
+            <returns>The converted <see cref="T:System.String"/>.</returns>
+        </member>
         <member name="M:Neo.SmartContract.Native.StdLib.Itoa(System.Numerics.BigInteger,System.Int32)">
             <summary>
             Converts an integer to a <see cref="T:System.String"/>.
@@ -6645,6 +6456,13 @@
             <param name="value">The integer to convert.</param>
             <param name="base">The base of the integer. Only support 10 and 16.</param>
             <returns>The converted <see cref="T:System.String"/>.</returns>
+        </member>
+        <member name="M:Neo.SmartContract.Native.StdLib.Atoi(System.String)">
+            <summary>
+            Converts a <see cref="T:System.String"/> to an integer.
+            </summary>
+            <param name="value">The <see cref="T:System.String"/> to convert.</param>
+            <returns>The converted integer.</returns>
         </member>
         <member name="M:Neo.SmartContract.Native.StdLib.Atoi(System.String,System.Int32)">
             <summary>
@@ -7225,7 +7043,7 @@
             </summary>
             <param name="verifiable">The <see cref="T:Neo.Network.P2P.Payloads.IVerifiable"/> to sign.</param>
             <param name="key">The private key to be used.</param>
-            <param name="magic">The magic number of the NEO network.</param>
+            <param name="network">The magic number of the NEO network.</param>
             <returns>The signature for the <see cref="T:Neo.Network.P2P.Payloads.IVerifiable"/>.</returns>
         </member>
         <member name="M:Neo.Wallets.Helper.ToAddress(Neo.UInt160,System.Byte)">
