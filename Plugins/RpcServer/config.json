@@ -2,7 +2,7 @@
   "PluginConfiguration": {
     "Servers": [
       {
-        "Network": 55555,
+        "Network": 4444,
         "BindAddress": "0.0.0.0",
         "Port": 30332,
         "SslCert": "",
@@ -14,7 +14,7 @@
         "MaxFee": 0.1,
         "MaxConcurrentConnections": 40,
         "MaxIteratorResultItems": 100,
-        "DisabledMethods": [ ]
+        "DisabledMethods": [  ]
       }
     ]
   }

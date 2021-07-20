@@ -324,6 +324,14 @@
             <param name="seed">The seed used by the murmur algorithm.</param>
             <returns>The computed hash code.</returns>
         </member>
+        <member name="M:Neo.Cryptography.Helper.Murmur128(System.Byte[],System.UInt32)">
+            <summary>
+            Computes the 128-bit hash value for the specified byte array using the murmur algorithm.
+            </summary>
+            <param name="value">The input to compute the hash code for.</param>
+            <param name="seed">The seed used by the murmur algorithm.</param>
+            <returns>The computed hash code.</returns>
+        </member>
         <member name="M:Neo.Cryptography.Helper.Sha256(System.Byte[])">
             <summary>
             Computes the hash value for the specified byte array using the sha256 algorithm.
@@ -383,14 +391,25 @@
             </summary>
             <param name="flags">The bit array to be used.</param>
         </member>
-        <member name="T:Neo.Cryptography.Murmur3">
+        <member name="T:Neo.Cryptography.Murmur128">
+            <summary>
+            Computes the 128 bits murmur hash for the input data.
+            </summary>
+        </member>
+        <member name="M:Neo.Cryptography.Murmur128.#ctor(System.UInt32)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Neo.Cryptography.Murmur128"/> class with the specified seed.
+            </summary>
+            <param name="seed">The seed to be used.</param>
+        </member>
+        <member name="T:Neo.Cryptography.Murmur32">
             <summary>
             Computes the murmur hash for the input data.
             </summary>
         </member>
-        <member name="M:Neo.Cryptography.Murmur3.#ctor(System.UInt32)">
+        <member name="M:Neo.Cryptography.Murmur32.#ctor(System.UInt32)">
             <summary>
-            Initializes a new instance of the <see cref="T:Neo.Cryptography.Murmur3"/> class with the specified seed.
+            Initializes a new instance of the <see cref="T:Neo.Cryptography.Murmur32"/> class with the specified seed.
             </summary>
             <param name="seed">The seed to be used.</param>
         </member>
@@ -2161,6 +2180,11 @@
             The timestamp of the block.
             </summary>
         </member>
+        <member name="P:Neo.Network.P2P.Payloads.Block.Nonce">
+            <summary>
+            The random number of the block.
+            </summary>
+        </member>
         <member name="P:Neo.Network.P2P.Payloads.Block.Index">
             <summary>
             The index of the block.
@@ -2334,6 +2358,11 @@
         <member name="P:Neo.Network.P2P.Payloads.Header.Timestamp">
             <summary>
             The timestamp of the block.
+            </summary>
+        </member>
+        <member name="P:Neo.Network.P2P.Payloads.Header.Nonce">
+            <summary>
+            The first eight bytes of random number generated.
             </summary>
         </member>
         <member name="P:Neo.Network.P2P.Payloads.Header.Index">
@@ -2627,6 +2656,11 @@
             Indicates that the request failed due to insufficient balance.
             </summary>
         </member>
+        <member name="F:Neo.Network.P2P.Payloads.OracleResponseCode.ContentTypeNotSupported">
+            <summary>
+            Indicates that the content-type of the request is not supported.
+            </summary>
+        </member>
         <member name="F:Neo.Network.P2P.Payloads.OracleResponseCode.Error">
             <summary>
             Indicates that the request failed due to other errors.
@@ -2706,11 +2740,6 @@
         <member name="F:Neo.Network.P2P.Payloads.Transaction.MaxTransactionSize">
             <summary>
             The maximum size of a transaction.
-            </summary>
-        </member>
-        <member name="F:Neo.Network.P2P.Payloads.Transaction.MaxValidUntilBlockIncrement">
-            <summary>
-            The maximum increment of the <see cref="P:Neo.Network.P2P.Payloads.Transaction.ValidUntilBlock"/> field.
             </summary>
         </member>
         <member name="F:Neo.Network.P2P.Payloads.Transaction.MaxTransactionAttributes">
@@ -3863,6 +3892,11 @@
             Indicates the time between two blocks.
             </summary>
         </member>
+        <member name="P:Neo.ProtocolSettings.MaxValidUntilBlockIncrement">
+            <summary>
+            The maximum increment of the <see cref="P:Neo.Network.P2P.Payloads.Transaction.ValidUntilBlock"/> field.
+            </summary>
+        </member>
         <member name="P:Neo.ProtocolSettings.MaxTransactionsPerBlock">
             <summary>
             Indicates the maximum number of transactions that can be contained in a block.
@@ -3881,6 +3915,11 @@
         <member name="P:Neo.ProtocolSettings.NativeUpdateHistory">
             <summary>
             Contains the update history of all native contracts.
+            </summary>
+        </member>
+        <member name="P:Neo.ProtocolSettings.InitialGasDistribution">
+            <summary>
+            Indicates the amount of gas to distribute during initialization.
             </summary>
         </member>
         <member name="P:Neo.ProtocolSettings.StandbyValidators">
@@ -4260,6 +4299,12 @@
             Gets the name of the current platform.
             </summary>
         </member>
+        <member name="F:Neo.SmartContract.ApplicationEngine.System_Runtime_GetNetwork">
+            <summary>
+            The <see cref="T:Neo.SmartContract.InteropDescriptor"/> of System.Runtime.GetNetwork.
+            Gets the magic number of the current network.
+            </summary>
+        </member>
         <member name="F:Neo.SmartContract.ApplicationEngine.System_Runtime_GetTrigger">
             <summary>
             The <see cref="T:Neo.SmartContract.InteropDescriptor"/> of System.Runtime.GetTrigger.
@@ -4308,6 +4353,12 @@
             Gets the number of times the current contract has been called during the execution.
             </summary>
         </member>
+        <member name="F:Neo.SmartContract.ApplicationEngine.System_Runtime_GetRandom">
+            <summary>
+            The <see cref="T:Neo.SmartContract.InteropDescriptor"/> of System.Runtime.GetRandom.
+            Gets the random number generated from the VRF.
+            </summary>
+        </member>
         <member name="F:Neo.SmartContract.ApplicationEngine.System_Runtime_Log">
             <summary>
             The <see cref="T:Neo.SmartContract.InteropDescriptor"/> of System.Runtime.Log.
@@ -4345,6 +4396,13 @@
             </summary>
             <returns>It always returns "NEO".</returns>
         </member>
+        <member name="M:Neo.SmartContract.ApplicationEngine.GetNetwork">
+            <summary>
+            The implementation of System.Runtime.GetNetwork.
+            Gets the magic number of the current network.
+            </summary>
+            <returns>The magic number of the current network.</returns>
+        </member>
         <member name="M:Neo.SmartContract.ApplicationEngine.GetTime">
             <summary>
             The implementation of System.Runtime.GetTime.
@@ -4380,6 +4438,13 @@
             Gets the number of times the current contract has been called during the execution.
             </summary>
             <returns>The number of times the current contract has been called during the execution.</returns>
+        </member>
+        <member name="M:Neo.SmartContract.ApplicationEngine.GetRandom">
+            <summary>
+            The implementation of System.Runtime.GetRandom.
+            Gets the next random number.
+            </summary>
+            <returns>The next random number.</returns>
         </member>
         <member name="M:Neo.SmartContract.ApplicationEngine.RuntimeLog(System.Byte[])">
             <summary>
@@ -4534,31 +4599,30 @@
             A binary serializer for <see cref="T:Neo.VM.Types.StackItem"/>.
             </summary>
         </member>
-        <member name="M:Neo.SmartContract.BinarySerializer.Deserialize(System.Byte[],System.UInt32,Neo.VM.ReferenceCounter)">
+        <member name="M:Neo.SmartContract.BinarySerializer.Deserialize(System.Byte[],Neo.VM.ExecutionEngineLimits,Neo.VM.ReferenceCounter)">
             <summary>
             Deserializes a <see cref="T:Neo.VM.Types.StackItem"/> from byte array.
             </summary>
             <param name="data">The byte array to parse.</param>
-            <param name="maxArraySize">The maximum length of arrays during the deserialization.</param>
+            <param name="limits">The limits for the deserialization.</param>
             <param name="referenceCounter">The <see cref="T:Neo.VM.ReferenceCounter"/> used by the <see cref="T:Neo.VM.Types.StackItem"/>.</param>
             <returns>The deserialized <see cref="T:Neo.VM.Types.StackItem"/>.</returns>
         </member>
-        <member name="M:Neo.SmartContract.BinarySerializer.Deserialize(System.ReadOnlySpan{System.Byte},System.UInt32,Neo.VM.ReferenceCounter)">
+        <member name="M:Neo.SmartContract.BinarySerializer.Deserialize(System.ReadOnlySpan{System.Byte},Neo.VM.ExecutionEngineLimits,Neo.VM.ReferenceCounter)">
             <summary>
             Deserializes a <see cref="T:Neo.VM.Types.StackItem"/> from byte array.
             </summary>
             <param name="data">The byte array to parse.</param>
-            <param name="maxArraySize">The maximum length of arrays during the deserialization.</param>
+            <param name="limits">The limits for the deserialization.</param>
             <param name="referenceCounter">The <see cref="T:Neo.VM.ReferenceCounter"/> used by the <see cref="T:Neo.VM.Types.StackItem"/>.</param>
             <returns>The deserialized <see cref="T:Neo.VM.Types.StackItem"/>.</returns>
         </member>
-        <member name="M:Neo.SmartContract.BinarySerializer.Deserialize(System.IO.BinaryReader,System.UInt32,System.UInt32,Neo.VM.ReferenceCounter)">
+        <member name="M:Neo.SmartContract.BinarySerializer.Deserialize(System.IO.BinaryReader,Neo.VM.ExecutionEngineLimits,Neo.VM.ReferenceCounter)">
             <summary>
             Deserializes a <see cref="T:Neo.VM.Types.StackItem"/> from <see cref="T:System.IO.BinaryReader"/>.
             </summary>
             <param name="reader">The <see cref="T:System.IO.BinaryReader"/> for reading data.</param>
-            <param name="maxArraySize">The maximum length of arrays during the deserialization.</param>
-            <param name="maxItemSize">The maximum size of <see cref="T:Neo.VM.Types.StackItem"/> during the deserialization.</param>
+            <param name="limits">The limits for the deserialization.</param>
             <param name="referenceCounter">The <see cref="T:Neo.VM.ReferenceCounter"/> used by the <see cref="T:Neo.VM.Types.StackItem"/>.</param>
             <returns>The deserialized <see cref="T:Neo.VM.Types.StackItem"/>.</returns>
         </member>
@@ -6231,6 +6295,14 @@
             <param name="snapshot">The snapshot used to read data.</param>
             <returns>The public keys of the members.</returns>
         </member>
+        <member name="M:Neo.SmartContract.Native.NeoToken.GetAccountState(Neo.Persistence.DataCache,Neo.UInt160)">
+            <summary>
+            Get account state.
+            </summary>
+            <param name="snapshot">The snapshot used to read data.</param>
+            <param name="account">account</param>
+            <returns>The state of the account.</returns>
+        </member>
         <member name="M:Neo.SmartContract.Native.NeoToken.GetCommitteeAddress(Neo.Persistence.DataCache)">
             <summary>
             Gets the address of the committee.
@@ -6496,6 +6568,20 @@
         <member name="M:Neo.SmartContract.Native.StdLib.Base58Decode(System.String)">
             <summary>
             Decodes a byte array from a base58 <see cref="T:System.String"/>.
+            </summary>
+            <param name="s">The base58 <see cref="T:System.String"/>.</param>
+            <returns>The decoded byte array.</returns>
+        </member>
+        <member name="M:Neo.SmartContract.Native.StdLib.Base58CheckEncode(System.Byte[])">
+            <summary>
+            Converts a byte array to its equivalent <see cref="T:System.String"/> representation that is encoded with base-58 digits. The encoded <see cref="T:System.String"/> contains the checksum of the binary data.
+            </summary>
+            <param name="data">The byte array to be encoded.</param>
+            <returns>The encoded <see cref="T:System.String"/>.</returns>
+        </member>
+        <member name="M:Neo.SmartContract.Native.StdLib.Base58CheckDecode(System.String)">
+            <summary>
+            Converts the specified <see cref="T:System.String"/>, which encodes binary data as base-58 digits, to an equivalent byte array. The encoded <see cref="T:System.String"/> contains the checksum of the binary data.
             </summary>
             <param name="s">The base58 <see cref="T:System.String"/>.</param>
             <returns>The decoded byte array.</returns>
