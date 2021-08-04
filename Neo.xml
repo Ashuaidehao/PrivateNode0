@@ -5378,11 +5378,12 @@
             <param name="maxSize">The maximum size of the JSON output.</param>
             <returns>A byte array containing the JSON output.</returns>
         </member>
-        <member name="M:Neo.SmartContract.JsonSerializer.Deserialize(Neo.IO.Json.JObject,Neo.VM.ReferenceCounter)">
+        <member name="M:Neo.SmartContract.JsonSerializer.Deserialize(Neo.IO.Json.JObject,Neo.VM.ExecutionEngineLimits,Neo.VM.ReferenceCounter)">
             <summary>
             Deserializes a <see cref="T:Neo.VM.Types.StackItem"/> from <see cref="T:Neo.IO.Json.JObject"/>.
             </summary>
             <param name="json">The <see cref="T:Neo.IO.Json.JObject"/> to deserialize.</param>
+            <param name="limits">The limits for the deserialization.</param>
             <param name="referenceCounter">The <see cref="T:Neo.VM.ReferenceCounter"/> used by the <see cref="T:Neo.VM.Types.StackItem"/>.</param>
             <returns>The deserialized <see cref="T:Neo.VM.Types.StackItem"/>.</returns>
         </member>
