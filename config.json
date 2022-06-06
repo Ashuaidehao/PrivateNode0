@@ -1,40 +1,42 @@
 {
-    "ApplicationConfiguration": {
-        "Logger": {
-            "Path": "Logs",
-            "ConsoleOutput": false,
-            "Active": false
-        },
-        "Storage": {
-            "Engine": "LevelDBStore",
-            "Path": "Data_LevelDB_4444"
-        },
-        "P2P": {
-            "Port": 30333,
-            "WsPort": 30334
-        },
-        "UnlockWallet": {
-            "Path": "0.json",
-            "Password": "123456",
-            "IsActive": true
-        },
-        "PluginURL": "https://github.com/neo-project/neo-modules/releases/download/v{1}/{0}.zip"
+  "ApplicationConfiguration": {
+    "Logger": {
+      "Path": "Logs",
+      "ConsoleOutput": false,
+      "Active": false
     },
-    "ProtocolConfiguration": {
-        "Network": 4444,
-        "AddressVersion": 53,
-        "MillisecondsPerBlock": 15000,
-        "MaxTransactionsPerBlock": 512,
-        "MemoryPoolMaxTransactions": 50000,
-        "MaxTraceableBlocks": 2102400,
-        "InitialGasDistribution": 5200000000000000,
-        "ValidatorsCount": 1,
-        "StandbyCommittee": [
-            "021821807f923a3da004fb73871509d7635bcc05f41edef2a3ca5c941d8bbc1231"
-        ],
-        "SeedList": [
-            //"127.0.0.1:10333"
-            //"20.198.249.57:30333"
-        ]
+    "Storage": {
+      "Engine": "LevelDBStore",
+      "Path": "Data_LevelDB_330"
+    },
+    "P2P": {
+      "Port": 30333,
+      "WsPort": 30334,
+      "MinDesiredConnections": 10,
+      "MaxConnections": 40,
+      "MaxConnectionsPerAddress": 3
+    },
+    "UnlockWallet": {
+      "Path": "0.json",
+      "Password": "123456",
+      "IsActive": true
     }
+  },
+  "ProtocolConfiguration": {
+    "Network": 330,
+    "AddressVersion": 53,
+    "MillisecondsPerBlock": 15000,
+    "MaxTransactionsPerBlock": 512,
+    "MemoryPoolMaxTransactions": 50000,
+    "MaxTraceableBlocks": 2102400,
+    "Hardforks": {
+    },
+    "InitialGasDistribution": 5200000000000000,
+    "ValidatorsCount": 1,
+    "StandbyCommittee": [
+      "021821807f923a3da004fb73871509d7635bcc05f41edef2a3ca5c941d8bbc1231"
+    ],
+    "SeedList": [
+    ]
+  }
 }
