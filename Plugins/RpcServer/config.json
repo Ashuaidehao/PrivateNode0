@@ -2,7 +2,7 @@
   "PluginConfiguration": {
     "Servers": [
       {
-        "Network": 330,
+        "Network": 340,
         "BindAddress": "0.0.0.0",
         "Port": 30332,
         "SslCert": "",
@@ -15,7 +15,9 @@
         "MaxConcurrentConnections": 40,
         "MaxIteratorResultItems": 100,
         "MaxStackSize": 65535,
-        "DisabledMethods": [ ]
+        "DisabledMethods": [],
+        "SessionEnabled": false,
+        "SessionExpirationTime": 60
       }
     ]
   }

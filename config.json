@@ -7,7 +7,7 @@
     },
     "Storage": {
       "Engine": "LevelDBStore",
-      "Path": "Data_LevelDB_330"
+      "Path": "Data_LevelDB_340"
     },
     "P2P": {
       "Port": 30333,
@@ -23,20 +23,18 @@
     }
   },
   "ProtocolConfiguration": {
-    "Network": 330,
+    "Network": 340,
     "AddressVersion": 53,
     "MillisecondsPerBlock": 15000,
     "MaxTransactionsPerBlock": 512,
     "MemoryPoolMaxTransactions": 50000,
     "MaxTraceableBlocks": 2102400,
-    "Hardforks": {
-    },
+    "Hardforks": {},
     "InitialGasDistribution": 5200000000000000,
     "ValidatorsCount": 1,
     "StandbyCommittee": [
       "021821807f923a3da004fb73871509d7635bcc05f41edef2a3ca5c941d8bbc1231"
     ],
-    "SeedList": [
-    ]
+    "SeedList": []
   }
 }

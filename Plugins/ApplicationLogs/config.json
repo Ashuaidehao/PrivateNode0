@@ -1,7 +1,7 @@
 {
   "PluginConfiguration": {
     "Path": "ApplicationLogs_{0}",
-    "Network": 330,
+    "Network": 340,
     "MaxStackSize": 65535
   },
   "Dependency": [
