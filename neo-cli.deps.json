@@ -6,16 +6,16 @@
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v6.0": {
-      "neo-cli/3.3.0": {
+      "neo-cli/3.4.0": {
         "dependencies": {
-          "Neo": "3.3.0",
+          "Neo": "3.4.0",
           "Neo.ConsoleService": "1.2.0"
         },
         "runtime": {
           "neo-cli.dll": {}
         }
       },
-      "Akka/1.4.38": {
+      "Akka/1.4.40": {
         "dependencies": {
           "Microsoft.Extensions.ObjectPool": "5.0.5",
           "Newtonsoft.Json": "12.0.3",
@@ -26,8 +26,8 @@
         },
         "runtime": {
           "lib/netstandard2.0/Akka.dll": {
-            "assemblyVersion": "1.4.38.0",
-            "fileVersion": "1.4.38.0"
+            "assemblyVersion": "1.4.40.0",
+            "fileVersion": "1.4.40.0"
           }
         }
       },
@@ -47,21 +47,21 @@
           }
         }
       },
-      "Microsoft.Data.Sqlite.Core/6.0.5": {
+      "Microsoft.Data.Sqlite.Core/6.0.7": {
         "dependencies": {
           "SQLitePCLRaw.core": "2.0.6"
         },
         "runtime": {
           "lib/net6.0/Microsoft.Data.Sqlite.dll": {
-            "assemblyVersion": "6.0.5.0",
-            "fileVersion": "6.0.522.21804"
+            "assemblyVersion": "6.0.7.0",
+            "fileVersion": "6.0.722.31501"
           }
         }
       },
-      "Microsoft.EntityFrameworkCore/6.0.5": {
+      "Microsoft.EntityFrameworkCore/6.0.7": {
         "dependencies": {
-          "Microsoft.EntityFrameworkCore.Abstractions": "6.0.5",
-          "Microsoft.EntityFrameworkCore.Analyzers": "6.0.5",
+          "Microsoft.EntityFrameworkCore.Abstractions": "6.0.7",
+          "Microsoft.EntityFrameworkCore.Analyzers": "6.0.7",
           "Microsoft.Extensions.Caching.Memory": "6.0.1",
           "Microsoft.Extensions.DependencyInjection": "6.0.0",
           "Microsoft.Extensions.Logging": "6.0.0",
@@ -70,48 +70,48 @@
         },
         "runtime": {
           "lib/net6.0/Microsoft.EntityFrameworkCore.dll": {
-            "assemblyVersion": "6.0.5.0",
-            "fileVersion": "6.0.522.21804"
+            "assemblyVersion": "6.0.7.0",
+            "fileVersion": "6.0.722.31501"
           }
         }
       },
-      "Microsoft.EntityFrameworkCore.Abstractions/6.0.5": {
+      "Microsoft.EntityFrameworkCore.Abstractions/6.0.7": {
         "runtime": {
           "lib/net6.0/Microsoft.EntityFrameworkCore.Abstractions.dll": {
-            "assemblyVersion": "6.0.5.0",
-            "fileVersion": "6.0.522.21804"
+            "assemblyVersion": "6.0.7.0",
+            "fileVersion": "6.0.722.31501"
           }
         }
       },
-      "Microsoft.EntityFrameworkCore.Analyzers/6.0.5": {},
-      "Microsoft.EntityFrameworkCore.Relational/6.0.5": {
+      "Microsoft.EntityFrameworkCore.Analyzers/6.0.7": {},
+      "Microsoft.EntityFrameworkCore.Relational/6.0.7": {
         "dependencies": {
-          "Microsoft.EntityFrameworkCore": "6.0.5",
+          "Microsoft.EntityFrameworkCore": "6.0.7",
           "Microsoft.Extensions.Configuration.Abstractions": "6.0.0"
         },
         "runtime": {
           "lib/net6.0/Microsoft.EntityFrameworkCore.Relational.dll": {
-            "assemblyVersion": "6.0.5.0",
-            "fileVersion": "6.0.522.21804"
+            "assemblyVersion": "6.0.7.0",
+            "fileVersion": "6.0.722.31501"
           }
         }
       },
-      "Microsoft.EntityFrameworkCore.Sqlite/6.0.5": {
+      "Microsoft.EntityFrameworkCore.Sqlite/6.0.7": {
         "dependencies": {
-          "Microsoft.EntityFrameworkCore.Sqlite.Core": "6.0.5",
+          "Microsoft.EntityFrameworkCore.Sqlite.Core": "6.0.7",
           "SQLitePCLRaw.bundle_e_sqlite3": "2.0.6"
         }
       },
-      "Microsoft.EntityFrameworkCore.Sqlite.Core/6.0.5": {
+      "Microsoft.EntityFrameworkCore.Sqlite.Core/6.0.7": {
         "dependencies": {
-          "Microsoft.Data.Sqlite.Core": "6.0.5",
-          "Microsoft.EntityFrameworkCore.Relational": "6.0.5",
+          "Microsoft.Data.Sqlite.Core": "6.0.7",
+          "Microsoft.EntityFrameworkCore.Relational": "6.0.7",
           "Microsoft.Extensions.DependencyModel": "6.0.0"
         },
         "runtime": {
           "lib/net6.0/Microsoft.EntityFrameworkCore.Sqlite.dll": {
-            "assemblyVersion": "6.0.5.0",
-            "fileVersion": "6.0.522.21804"
+            "assemblyVersion": "6.0.7.0",
+            "fileVersion": "6.0.722.31501"
           }
         }
       },
@@ -205,26 +205,35 @@
           }
         }
       },
-      "Neo/3.3.0": {
+      "Neo/3.4.0": {
         "dependencies": {
-          "Akka": "1.4.38",
+          "Akka": "1.4.40",
           "BouncyCastle.NetCore": "1.9.0",
           "K4os.Compression.LZ4": "1.2.16",
-          "Microsoft.EntityFrameworkCore.Sqlite": "6.0.5",
-          "Neo.VM": "3.3.0"
+          "Microsoft.EntityFrameworkCore.Sqlite": "6.0.7",
+          "Neo.Json": "3.4.0",
+          "Neo.VM": "3.4.0"
         },
         "runtime": {
           "lib/net6.0/Neo.dll": {
-            "assemblyVersion": "3.3.0.0",
-            "fileVersion": "3.3.0.0"
+            "assemblyVersion": "3.4.0.0",
+            "fileVersion": "3.4.0.0"
           }
         }
       },
-      "Neo.VM/3.3.0": {
+      "Neo.Json/3.4.0": {
+        "runtime": {
+          "lib/net6.0/Neo.Json.dll": {
+            "assemblyVersion": "3.4.0.0",
+            "fileVersion": "3.4.0.0"
+          }
+        }
+      },
+      "Neo.VM/3.4.0": {
         "runtime": {
           "lib/net6.0/Neo.VM.dll": {
-            "assemblyVersion": "3.3.0.0",
-            "fileVersion": "3.3.0.0"
+            "assemblyVersion": "3.4.0.0",
+            "fileVersion": "3.4.0.0"
           }
         }
       },
@@ -552,17 +561,17 @@
     }
   },
   "libraries": {
-    "neo-cli/3.3.0": {
+    "neo-cli/3.4.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
     },
-    "Akka/1.4.38": {
+    "Akka/1.4.40": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-L1vG+MO05A4qaiBr1wo4WQbjaXm2V//4DRoh8i4xEqpK39S/xMdkYNc/1wubxnJs27Yvytcqx+YF0CHJ4heXSQ==",
-      "path": "akka/1.4.38",
-      "hashPath": "akka.1.4.38.nupkg.sha512"
+      "sha512": "sha512-UC3m5uNxKsfM5/jcU2E896CsVHUGbwijRLRqBZvdSK8qiH8fV69k5mawrwISurkH3h9uRrjvJsI75RS8UDgSHw==",
+      "path": "akka/1.4.40",
+      "hashPath": "akka.1.4.40.nupkg.sha512"
     },
     "BouncyCastle.NetCore/1.9.0": {
       "type": "package",
@@ -578,54 +587,54 @@
       "path": "k4os.compression.lz4/1.2.16",
       "hashPath": "k4os.compression.lz4.1.2.16.nupkg.sha512"
     },
-    "Microsoft.Data.Sqlite.Core/6.0.5": {
+    "Microsoft.Data.Sqlite.Core/6.0.7": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-NDvPAsJZSptFxB5B5t3a/7UUihO2nPm8nsEG3s2EtnccIotMsQqSkDdak/T/tWQUivzdiy1Q/0jXk97zQgD75Q==",
-      "path": "microsoft.data.sqlite.core/6.0.5",
-      "hashPath": "microsoft.data.sqlite.core.6.0.5.nupkg.sha512"
+      "sha512": "sha512-lB8T+Y/5pMDBf13dGnrQvZ9rfkZrvRY82FgVElWGIuIF3yFwYLR6475U4/IM+TNLPSk8SvTFBqdLN3gOm3suOQ==",
+      "path": "microsoft.data.sqlite.core/6.0.7",
+      "hashPath": "microsoft.data.sqlite.core.6.0.7.nupkg.sha512"
     },
-    "Microsoft.EntityFrameworkCore/6.0.5": {
+    "Microsoft.EntityFrameworkCore/6.0.7": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-hP5J3EvpVdZmCn1D3ovedphvZrIn3OXZaBZfEnCkSCqqbqAu6xzwbNqwRkik0y4R6zOOf4eLh1riwjy4eAUlZA==",
-      "path": "microsoft.entityframeworkcore/6.0.5",
-      "hashPath": "microsoft.entityframeworkcore.6.0.5.nupkg.sha512"
+      "sha512": "sha512-9BsvGSpTzxvqnxH19wLBFivK5TzWmsHZQc/1cQ4b2e+k85aIG9R4FYewQLHZdPrAxNQImXjTyW5nRI3s1rpt6A==",
+      "path": "microsoft.entityframeworkcore/6.0.7",
+      "hashPath": "microsoft.entityframeworkcore.6.0.7.nupkg.sha512"
     },
-    "Microsoft.EntityFrameworkCore.Abstractions/6.0.5": {
+    "Microsoft.EntityFrameworkCore.Abstractions/6.0.7": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-Q3/fKW6XCTfnDk4fYP2BJZi84cD2SuCPkP3A3QqxvCQcXbX90bfSLzVIsoMXzigHGJgZUJ+Un7QodT5Nvk0+Eg==",
-      "path": "microsoft.entityframeworkcore.abstractions/6.0.5",
-      "hashPath": "microsoft.entityframeworkcore.abstractions.6.0.5.nupkg.sha512"
+      "sha512": "sha512-bjU0CkTqldgpVPTSj9M+R/3EaTz+u0jMeQMIC91YdGYDbpX/tAN5UYx+Ihzk4AtP8gmhburQUgMTdnmCE9c5sA==",
+      "path": "microsoft.entityframeworkcore.abstractions/6.0.7",
+      "hashPath": "microsoft.entityframeworkcore.abstractions.6.0.7.nupkg.sha512"
     },
-    "Microsoft.EntityFrameworkCore.Analyzers/6.0.5": {
+    "Microsoft.EntityFrameworkCore.Analyzers/6.0.7": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-QUeDIhs+O+MoDEc3k60mNyVDbwyDURCqZQlZoKShuZUcSfXSrDMbHKuFSxBIDNQBt092qSjfnwf7w0Ua/IB3Zw==",
-      "path": "microsoft.entityframeworkcore.analyzers/6.0.5",
-      "hashPath": "microsoft.entityframeworkcore.analyzers.6.0.5.nupkg.sha512"
+      "sha512": "sha512-VAOrGma8mRspUb/9quwIr21UZVqfWOcRQqhcYNkHBUD7woenwFTBvntiC9h2Ebtvj/BrRfezqjaHpWVvPSg4dw==",
+      "path": "microsoft.entityframeworkcore.analyzers/6.0.7",
+      "hashPath": "microsoft.entityframeworkcore.analyzers.6.0.7.nupkg.sha512"
     },
-    "Microsoft.EntityFrameworkCore.Relational/6.0.5": {
+    "Microsoft.EntityFrameworkCore.Relational/6.0.7": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-vhAQizlAgvPfurkh9XysNaFc/g3WPXtSka3Y1rXuQdnT//p16CDKt9lO9h+rYmooD+cA7TijSxwqck4GApDT/Q==",
-      "path": "microsoft.entityframeworkcore.relational/6.0.5",
-      "hashPath": "microsoft.entityframeworkcore.relational.6.0.5.nupkg.sha512"
+      "sha512": "sha512-0uo4fPDHutMbd9AJJEKl2q/2fYuFGA8tEBE2fQeQFaNDd+F/aUjaXc1FUD84J7Wcax8WP40rZo1E0u9A0yPPZw==",
+      "path": "microsoft.entityframeworkcore.relational/6.0.7",
+      "hashPath": "microsoft.entityframeworkcore.relational.6.0.7.nupkg.sha512"
     },
-    "Microsoft.EntityFrameworkCore.Sqlite/6.0.5": {
+    "Microsoft.EntityFrameworkCore.Sqlite/6.0.7": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-CPeREpNSs/KXygneP1sP5guyMAwf3GzFreclHUWRS0uGRoCuwLal4I0npjx2ayVUlc+nJc3dXoRPktrJ5qpXgA==",
-      "path": "microsoft.entityframeworkcore.sqlite/6.0.5",
-      "hashPath": "microsoft.entityframeworkcore.sqlite.6.0.5.nupkg.sha512"
+      "sha512": "sha512-HukwRx+19dkS1ITJHHHVDSpsD5Kjb+2AjFV6SfbAVIPzuXGHTXTlavjm2iq1VbZKH9JNoSnk3d3DleOGtqwpMQ==",
+      "path": "microsoft.entityframeworkcore.sqlite/6.0.7",
+      "hashPath": "microsoft.entityframeworkcore.sqlite.6.0.7.nupkg.sha512"
     },
-    "Microsoft.EntityFrameworkCore.Sqlite.Core/6.0.5": {
+    "Microsoft.EntityFrameworkCore.Sqlite.Core/6.0.7": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-4gI0QAy/PInuy3dambikC68mJIodkaxpdFwiqUgBp/pLAxy8hQInuMjSqz4GEX3/mm8emqbax5nNUfDkvnCdAA==",
-      "path": "microsoft.entityframeworkcore.sqlite.core/6.0.5",
-      "hashPath": "microsoft.entityframeworkcore.sqlite.core.6.0.5.nupkg.sha512"
+      "sha512": "sha512-HkbLD+OzmpsxG6OSazh5kgXCR/YLqQA3IWC/vz/Qx+hmNVAIoHm8v/9YQNoryDzCvRYOHYiK5/oOLl6OG05R2g==",
+      "path": "microsoft.entityframeworkcore.sqlite.core/6.0.7",
+      "hashPath": "microsoft.entityframeworkcore.sqlite.core.6.0.7.nupkg.sha512"
     },
     "Microsoft.Extensions.Caching.Abstractions/6.0.0": {
       "type": "package",
@@ -725,19 +734,26 @@
       "path": "microsoft.win32.systemevents/4.7.0",
       "hashPath": "microsoft.win32.systemevents.4.7.0.nupkg.sha512"
     },
-    "Neo/3.3.0": {
+    "Neo/3.4.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-f7sgdjg2HNEsCV2GG4KZbvzc0g+G2LI+PfHpdTb+HfnkliNWdSlHtjEuQa1fcmJf9P8BeP5x2bHw98pMdRYYWQ==",
-      "path": "neo/3.3.0",
-      "hashPath": "neo.3.3.0.nupkg.sha512"
+      "sha512": "sha512-uQr32ZEYABHbQb5CgSeqxLfjrw65DWlQczJ4R5lB/S2H+44O/QYRwVbCrU2UdyA04AbN1HLYGNG0XQxSQXHJxg==",
+      "path": "neo/3.4.0",
+      "hashPath": "neo.3.4.0.nupkg.sha512"
     },
-    "Neo.VM/3.3.0": {
+    "Neo.Json/3.4.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-Ql8W8uVZCGxHnmlqk76Vxqy8uf2Rs5f8z0C8FTHCjRM2e16clyeN073m72VEyg284Yewf9bQ8WoU1+UUG8lNmQ==",
-      "path": "neo.vm/3.3.0",
-      "hashPath": "neo.vm.3.3.0.nupkg.sha512"
+      "sha512": "sha512-JYy8V1R1j0p0e3jjNF2rfGmncNyfN7qz0e/HbNVbSmTzI05XOLOksw/yDu/NZhV8PU6tGY1YJO8fpjSeb6xJ0w==",
+      "path": "neo.json/3.4.0",
+      "hashPath": "neo.json.3.4.0.nupkg.sha512"
+    },
+    "Neo.VM/3.4.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-eVZOr//kpgL7xz1BoX4pzG4eZpubausP2+AOE2955zguORZd2TmUbT7S0uihcg9m9x88Tto+nTs4dVCvPPPxZA==",
+      "path": "neo.vm/3.4.0",
+      "hashPath": "neo.vm.3.4.0.nupkg.sha512"
     },
     "Newtonsoft.Json/12.0.3": {
       "type": "package",
